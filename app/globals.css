@@ -34,10 +34,10 @@
 
     --radius: 0.5rem;
 
-    --scoll-bar-track-background: #FFF7F1;
+    --scoll-bar-track-background: #fff7f1;
     --scoll-bar-thumb-background: #efedeb;
   }
-  
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -50,25 +50,25 @@
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    
+
     --scoll-bar-track-background: #333;
-    --scoll-bar-thumb-background: #1A1C29;
+    --scoll-bar-thumb-background: #1a1c29;
   }
 }
 
@@ -87,15 +87,18 @@
   /* height: 10px; Mostly for horizontal scrollbars */
 }
 
-::-webkit-scrollbar-track { /* Background */
+::-webkit-scrollbar-track {
+  /* Background */
   /* @apply bg-[#333]; */
   @apply bg-[var(--scoll-bar-track-background)];
   border-radius: 100vw;
   margin-block: 0.5em;
 }
 
-::-webkit-scrollbar-thumb { /* Foreground */
+::-webkit-scrollbar-thumb {
+  /* Foreground */
   /* @apply dark:bg-[#1A1C29]; */
   @apply bg-[var(--scoll-bar-thumb-background)];
   border-radius: 100vw;
+  border: 2px solid var(--scoll-bar-track-background);
 }
